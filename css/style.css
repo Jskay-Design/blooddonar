@@ -1,0 +1,74 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-image:url(../img/background1.jpg);
+    background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container-fluid{  
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+}
+h1{
+    text-align: center;
+}
+     /* This section Is only For Update System */
+.donarForm{
+  margin-bottom: 50px;
+}
+.insert-form{
+    background-color:rgba(0, 0, 0, 0.3);
+    width: 550px;
+    margin: 100px auto 0px auto;
+    margin-top: 10px;
+    color: white;
+    padding: 15px;
+    font-size: 20px; 
+}
+.insert-form label{
+    margin-left: 10px;
+    width: 200px;
+    text-align: left;
+}
+.insert-form input{
+    margin-right: 10px;
+    width: 220px;
+}
+.headings span{
+    color: white;
+   padding: 5px;
+   background: linear-gradient(90deg, rgba(0,212,255,1) 27%, rgba(9,9,121,1) 77%, rgba(30,26,147,1) 100%);
+}
+#htmltoimage{
+      background-image: url("../img/background.jpg"); 
+   background-repeat: no-repeat;
+   background-position: relative;
+   background-size: cover; 
+   width: 550px;
+   margin: 100px auto 0px auto;
+   margin-top: 10px;
+}
+.donar-img img{
+    border: 2px solid rgb(240, 48, 48);
+    box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 254, 252) 0px 0px 0px 9px;
+    margin: 5px;
+   }
+.data-details{
+    font-size: 1em;
+}
+.display-data{
+    font-size: 1.2em;
+    font-weight: 800;
+    text-align:center;
+    color: white;
+    line-height: 80%;    
+}
+.display-data span{
+    background-color: rgb(26, 24, 24);
+    padding: 5px;
+    width: 100px;
+}

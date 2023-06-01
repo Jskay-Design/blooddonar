@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <title>Photography Create System for Blood Donar</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="container-fluid donarForm "> 
+			<div class="row ">
+			  <!--#################Blood Donar Data input section -->
+				<div class="col-md-6 col-sm-12 col-lg-12  ">
+        <div class="insert-form">
+          <h2 class="text-center pt-3 pb-3 headings" ><span>রক্তদাতার তথ্য দিন</span></h2>
+          <form  name="dataForm" action="#" onsubmit="return validatinForm()" >
+
+            <label for="fName">রক্ত দাতার নামঃ</label>
+            <input type="text" id="fName" placeholder="রক্ত দাতার নাম">
+          <br> 
+          <label for="bgroup">রক্তের গ্রুপঃ</label>
+          <select name="" id="bgroup">
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+          </select>
+
+          <br>
+          <label for="bdonateDate">রক্ত দানের তারিখ:</label>
+          <input type="" id="bdonateDate"  />
+          <br>
+          <label for="lastDate">রক্ত দানের অবস্থাঃ</label>
+          <input type="text" id="lastDate" />
+          <br> 
+          <label for="DonarPhoto">রক্ত দাতার ছবিঃ </label>
+          <input id="DonarPhoto" type="file" accept="imnage/*" onchange="preview_image(event)" />
+          
+          <br>
+           <!-- this javascript code for upload image insert -->
+           <script type="text/javascript">
+            function preview_image(event) {
+              var reader = new FileReader();
+              reader.onload = function(){
+                var output = document.getElementById('output_image');
+                output.src = reader.result;
+              }
+              reader.readAsDataURL(event.target.files[0]);
+            }
+          </script>
+          <div class="row justify-content-center p-2">
+            <button onclick="dSubmit()" type="button" class="btn btn-success">পরবর্তী  ধাপে যান</button>
+          </div>          
+          </form>
+        </div>
+				</div>
+				</div>  
+  
+				<!--Blood Donar Data  input Form section End -->       
+				
+				<!-- Blood Donar Data Display/Show section is Start -->				
+<div class="row p-3">
+  <div class="col-md-12 col-sm-12 col-lg-12 ">
+    <h2 class="text-center headings" > <span>নিম্নে রক্তদাতার তথ্য গুলো</span>  </h2>
+    <div id="htmltoimage"> 
+      <div class="abbmodal text-center"> 
+        <img src="img/name.png"  height="90%" width="100%"alt="">
+      </div>
+    <div class=" donar-img p-2 text-center">
+    <img class="rounded mt-1 mb-1" id="output_image" height="280" width="280">
+      </div>  
+  <div class="mt-2 pt-2">	
+    <div class="display-data" >       
+      <p> <span id="DonarName">রক্ত দাতার নামঃ</span>  </p>
+      <p> <span id="bloodGroup">রক্তের গ্রুপঃ </span></p>
+      <p> <span id="donateDate">রক্ত দানের তারিখ: </span></p> 
+    </div>		   
+  <div class="text-center">
+        <img src="img/footer.png" height="90%" width="100%" alt="">
+      </div>
+        </div>
+    </div>		
+    <div class="row justify-content-center p-2">
+      <button type="button" style="float: center;" class="btn btn-success" onclick="downloadimage()"> ছবি আকারে সংগ্রহ করুন </button>
+    </div>	    
+          </div>
+</div>  
+</div> 
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/html2canvas.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
